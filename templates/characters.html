@@ -1,0 +1,26 @@
+{% extends 'layaut.html' %}
+
+
+{% block content %}
+ <div class="row">
+     {% for personagem in meus_personagens %}
+         <div class="col-sm-3 col-6">
+
+             <img src="{{personagem.image}}" alt="{{personagem.name}}"
+            class="img-fluid img-thumbnail"/>
+                
+            <h3 class="h5">{{personagem.name}}</h3> 
+            <p>
+                <a href="/profile/{{personagem.id}}" class="btn btn-primary">View Profile</a>
+                
+            </p>
+
+         
+        </div>
+
+     {% endfor %}
+ </div>
+ 
+ 
+{% endblock %}
+
